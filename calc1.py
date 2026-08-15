@@ -8,7 +8,7 @@ st.title('Calculadora padrão')
 n1 = st.number_input('Valor 1: ')
 n2 = st.number_input('Valor 2: ')
 
-col1, col2, col3, col4, col5 = st.columns(5)
+col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 with col1:
     if st.button("Somar"):
@@ -41,3 +41,8 @@ with col5:
         n1 = f"{n1:,.2f}".replace(",", "v").replace(".", ",").replace("v", ".")
         raiz = f"{raiz:,.2f}".replace(",", "v").replace(".", ",").replace("v", ".")
         st.success(f'A raíz quadrada de {n1} é: {raiz}')
+        
+with col6:
+    if st.button("PI"):
+        pi = math.pi
+        st.success(f'Valor do PI {pi:.5f}')
