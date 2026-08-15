@@ -3,7 +3,9 @@ import math
 
 resultado = 0
 
-st.title('Calculadora padrão')
+st.title('📊 Calculadora padrão')
+
+st.sidebar.selectbox("Escolha uma opção", ['Dashboard','Calculadora'])
 
 n1 = st.number_input('Valor 1: ')
 n2 = st.number_input('Valor 2: ')
